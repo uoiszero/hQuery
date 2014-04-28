@@ -1,0 +1,15 @@
+{
+    "name": "hQuery",
+    "description":"hQuery's html to json library.",
+    "author":{
+        "name":"Alex Yue"
+    },
+    "main": "hQuery.js",
+    "version": "0.0.1",
+    "dependencies": {
+        "request": "2.x.x",
+        "underscore": "1.6.x",
+        "cheerio":"0.15.x",
+        "iconv-lite":"0.2.x"
+    }
+}
