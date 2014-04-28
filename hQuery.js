@@ -26,13 +26,13 @@ var request = require("request")
 function Engine() {
 }
 
-Engine.prototype.search = function (options, callback) {
+Engine.prototype.toJson = function (options, callback) {
     var self = this;
     this.getHtml(options, function (err, html) {
         if (err) {
             callback(err);
         } else {
-            var json = self.toJson(html, options);
+            var json = self.format(html, options);
             callback(null, json);
         }
     })
@@ -65,7 +65,7 @@ Engine.prototype.getHtml = function (options, callback) {
     })
 };
 
-Engine.prototype.toJson = function (html, options) {
+Engine.prototype.format = function (html, options) {
     if (options == undefined) {
         throw  new Error("undefined is not a valid options object.")
     } else if (options.mapping == undefined) {
