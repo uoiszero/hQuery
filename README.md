@@ -1,5 +1,6 @@
-hQuery
-======
+# hQuery -- Convert Html to Json
+
+[![NPM](https://nodei.co/npm/node-hquery.png)](https://nodei.co/npm/node-hquery/)
 
 A HTML to JSON library.
 
