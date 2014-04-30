@@ -19,3 +19,13 @@ hQuery.toJson(options, function(err, json){
     console.log(json);
 });
 ```
+
+## Encoding
+
+add `encoding:"gbk"` in options.
+
+## Attribute
+
+`title:"head title"` get title element text by default. use `title:{selector:"head title", attr:"href"}` to get attributes.
+
+## Foreach
