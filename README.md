@@ -29,3 +29,27 @@ add `encoding:"gbk"` in options.
 `title:"head title"` get title element text by default. use `title:{selector:"head title", attr:"href"}` to get attributes.
 
 ## Foreach
+
+use foreach like this. `.` mean current element.
+
+```javascript
+var options = {
+    url:"http://www.baidu.com",
+    mapping: {
+        p: {
+            selector: "p#nv a",
+            foreach: {
+                name: ".",
+                url: {
+                    selector: ".",
+                    attr: "href"
+                }
+            }
+        }
+    }
+};
+
+hQuery.toJson(options, function(err, json){
+    console.log(json);
+});
+```
