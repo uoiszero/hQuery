@@ -2,7 +2,16 @@
  * Created by UO on 2014/4/29 19:22.
  */
 
-var hQuery = require("../lib/hQuery")
-    , h = new hQuery;
+var hQuery = require("../lib/hQuery");
 
-h.toJson();
+var options = {
+    url:"http://www.baidu.com",
+    mapping:{
+        title:"head title"
+    }
+};
+
+hQuery.toJson(options, function(err, json){
+    console.log(err);
+    console.log(json);
+});

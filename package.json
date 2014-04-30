@@ -11,6 +11,5 @@
         "underscore": "1.6.x",
         "cheerio":"0.15.x",
         "iconv-lite":"0.2.x"
-    },
-
+    }
 }
