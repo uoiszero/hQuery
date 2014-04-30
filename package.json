@@ -1,8 +1,9 @@
 {
     "name": "node-hquery",
-    "description":"hQuery's html to json library.",
+    "description":"hQuery's html convert to json library.",
     "author":{
-        "name":"Alex Yue"
+        "name":"Alex Yue",
+        "email":"uo.is.zero@gmail.com"
     },
     "main": "lib/hQuery.js",
     "version": "0.0.1",
@@ -15,5 +16,9 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/uoiszero/hQuery.git"
-    }
+    },
+    "engines":{
+        "node":"0.10.x"
+    },
+    "keywords":["html", "json", "converter"]
 }
