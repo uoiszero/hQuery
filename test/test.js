@@ -7,16 +7,7 @@ var hQuery = require("../lib/hQuery");
 var options = {
     url:"http://www.baidu.com",
     mapping: {
-        p: {
-            selector: "p#nv a",
-            foreach: {
-                name: ".",
-                url: {
-                    selector: ".",
-                    attr: "href"
-                }
-            }
-        }
+        title:"head title"
     }
 };
 

@@ -53,3 +53,7 @@ hQuery.toJson(options, function(err, json){
     console.log(json);
 });
 ```
+
+## Function
+
+use `function(elem){return ...}`
