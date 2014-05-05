@@ -6,7 +6,7 @@
         "email":"uo.is.zero@gmail.com"
     },
     "main": "lib/hQuery.js",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "dependencies": {
         "request": "2.x.x",
         "underscore": "1.6.x",
