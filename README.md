@@ -6,24 +6,19 @@ A HTML to JSON library.
 
 ## Simple to use
 
+'hQuery.toJson(url [, mapping], callback)'
+
 hQuery is designed to convert html to json object, JQuery like.
 
 ```javascript
-var options = {
-    url:"http://www.baidu.com",
-    mapping:{
-        title:"head title",
-    }
+var mapping = {
+    title:"head title",
 };
 
-hQuery.toJson(options, function(err, json){
+hQuery.toJson("http://www.baidu.com", mapping, function(err, json){
     console.log(json);
 });
 ```
-
-## Encoding
-
-add `encoding:"gbk"` in options.
 
 ## Attribute
 
@@ -31,30 +26,36 @@ add `encoding:"gbk"` in options.
 
 ## Foreach
 
-use foreach like this. `.` mean current element.
+use foreach like this. Point `.` mean current element.
 
 ```javascript
 var options = {
-    url:"http://www.baidu.com",
-    mapping: {
-        p: {
-            selector: "p#nv a",
-            foreach: {
-                name: ".",
-                url: {
-                    selector: ".",
-                    attr: "href"
-                }
+    p: {
+        selector: "p#nv a",
+        foreach: {
+            name: ".",
+            url: {
+                selector: ".",
+                attr: "href"
             }
         }
-    }
 };
 
-hQuery.toJson(options, function(err, json){
+hQuery.toJson("http://www.baidu.com", mapping, function(err, json){
     console.log(json);
 });
 ```
 
 ## Function
 
-use `function(elem){return ...}`
+```javascript
+var mapping = {
+    title: function(elem){
+        return elem.text();
+    }
+};
+
+hQuery.toJson("http://www.baidu.com", mapping, function(err, json){
+    console.log(json);
+});
+```

@@ -4,22 +4,19 @@
 
 var hQuery = require("../lib/hQuery");
 
-var options = {
-    url:"http://www.baidu.com",
-    mapping: {
-        p: {
-            selector: "p#nv a",
-            foreach: {
-                name: ".",
-                url: {
-                    selector: ".",
-                    attr: "href"
-                }
+var mapping = {
+    p: {
+        selector: "p#nv a",
+        foreach: {
+            name: ".",
+            url: {
+                selector: ".",
+                attr: "href"
             }
         }
     }
 };
 
-hQuery.toJson(options, function(err, json){
+hQuery.toJson("http://www.baidu.com", mapping, function(err, json){
     console.log(json);
 });

@@ -6,12 +6,11 @@
         "email":"uo.is.zero@gmail.com"
     },
     "main": "lib/hQuery.js",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "dependencies": {
-        "request": "2.x.x",
         "underscore": "1.6.x",
         "cheerio":"0.15.x",
-        "iconv-lite":"0.2.x"
+        "fetch":"0.3.x"
     },
     "repository": {
         "type": "git",
