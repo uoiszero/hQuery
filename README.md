@@ -6,7 +6,7 @@ A HTML to JSON library.
 
 ## Simple to use
 
-'hQuery.toJson(url [, mapping], callback)'
+`hQuery.toJson(url [, mapping], callback)`
 
 hQuery is designed to convert html to json object, JQuery like.
 
